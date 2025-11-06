@@ -28,23 +28,67 @@ const MainContainer = ({ cameraRef, textRef, imgLoad, miniCamRef }) => {
       scrollTrigger: {
         trigger: pageRef.current,
         start: "top top",
-        end: "bottom bottom",
+        end: "33.33% bottom",
         scrub: true,
-        markers: true,
+        // markers: true,
         // anticipatePin: true
       },
     });
-
     tl.to(cameraRef.current, {
       rotate: 90,
       scale: 1.1,
       y: 10,
       x: -10,
     });
+
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: pageRef.current,
+        start: "16.66% top",
+        end: "50% bottom",
+        scrub: true,
+        // markers: true,
+        // anticipatePin: true
+      },
+    });
+    tl2.to(cameraRef.current, {
+      rotate: 70,
+      scale: 0.9,
+    });
+
+    const tl3 = gsap.timeline({
+      scrollTrigger: {
+        trigger: pageRef.current,
+        start: "33.33% top",
+        end: "66.66% bottom",
+        scrub: true,
+        // markers: true,
+        // anticipatePin: true
+      },
+    });
+    tl3.to(cameraRef.current, {
+      rotate: 0,
+      scale: 0.6,
+    });
+
+    const tl4 = gsap.timeline({
+      scrollTrigger: {
+        trigger: pageRef.current,
+        start: "50% top",
+        end: "bottom bottom",
+        scrub: true,
+        markers: true,
+        // anticipatePin: true
+      },
+    });
+    tl4.to(cameraRef.current, {
+      yPercent: -100
+    });
   }, []);
 
   return (
     <div ref={pageRef} className="">
+      {/* first 100vh screen */}
       <div className="w-full h-screen flex flex-col justify-center items-center ">
         <img
           ref={cameraRef}
@@ -67,6 +111,8 @@ const MainContainer = ({ cameraRef, textRef, imgLoad, miniCamRef }) => {
           className="absolute w-[10vw] opacity-80 right-[18vw] -rotate-30 top-[12vh]"
         />
       </div>
+
+      {/* secont 100vh screen */}
       <div className="h-screen  flex justify-between items-center px-10 ">
         <div className="w-[34%] h-[55vh] -mt-5 flex flex-col gap-3">
           <h6 className="font-[calligraphic] font-semibold">Limited version</h6>
@@ -86,12 +132,90 @@ const MainContainer = ({ cameraRef, textRef, imgLoad, miniCamRef }) => {
             BUY NOW
           </button>
         </div>
+
         <div className="w-[27%] h-[55vh] flex flex-col justify-between -mt-5">
-          <div className="border-black border-[5px] h-[16vh]"></div>
-          <div className="border-black border-[5px] h-[16vh]"></div>
-          <div className="border-black border-[5px] h-[16vh]"></div>
+          <div className="border-black border-[5px] h-[16vh] flex flex-col items-left px-6 justify-center gap-1">
+            <div className="">
+              <h2 className="font-bold text-left text-md font-[birch] tracking-wider">
+                RES
+              </h2>{" "}
+              <p className="text-[8px] font-[open-sans] leading-tight">
+                Lens Resolution
+              </p>
+            </div>
+            <div className="w-10/12 bg-[#0e0e0f] h-0.5"></div>
+            <div className="flex items-center">
+              <div className="w-4/12">
+                <h2 className="text-6xl font-bold font-[birch]">55%</h2>
+              </div>
+              <div className="ml-7">
+                <p className="text-[10px] font-[open-sans] leading-tight ">
+                  Cameras have evolved significantly since inception, transform
+                  from bulky devices
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-black border-[5px] h-[16vh] flex flex-col items-left px-6 justify-center gap-1">
+            <div className="">
+              <h2 className="font-bold text-left text-md font-[birch] tracking-wider">
+                RES
+              </h2>{" "}
+              <p className="text-[8px] font-[open-sans] leading-tight">
+                Lens Resolution
+              </p>
+            </div>
+            <div className="w-10/12 bg-[#0e0e0f] h-0.5"></div>
+            <div className="flex items-center">
+              <div className="w-4/12">
+                <h2 className="text-6xl font-bold font-[birch]">34%</h2>
+              </div>
+              <div className="ml-7">
+                <p className="text-[10px] font-[open-sans] leading-tight ">
+                  Cameras have evolved significantly since inception, transform
+                  from bulky devices
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-black border-[5px] h-[16vh] flex flex-col items-left px-6 justify-center gap-1">
+            <div className="">
+              <h2 className="font-bold text-left text-md font-[birch] tracking-wider">
+                RES
+              </h2>{" "}
+              <p className="text-[8px] font-[open-sans] leading-tight">
+                Lens Resolution
+              </p>
+            </div>
+            <div className="w-10/12 bg-[#0e0e0f] h-0.5"></div>
+            <div className="flex items-center">
+              <div className="w-4/12">
+                <h2 className="text-6xl font-bold font-[birch]">12%</h2>
+              </div>
+              <div className="ml-7">
+                <p className="text-[10px] font-[open-sans] leading-tight ">
+                  Cameras have evolved significantly since inception, transform
+                  from bulky devices
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* third 100vh screen */}
+      <div className="h-screen"></div>
+
+      {/* fourth 100vh screen */}
+      <div className="h-screen"></div>
+
+      {/* fifth 100vh screen */}
+      <div className="h-screen"></div>
+
+      {/* sixth 100vh screen */}
+      <div className="h-screen"></div>
     </div>
   );
 };
