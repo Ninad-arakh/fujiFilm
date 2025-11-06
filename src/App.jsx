@@ -98,7 +98,7 @@ const App = () => {
       >
         <div className="w-[0.3vw] h-[95vh] bg-[#0e0e0f] rounded-full"></div>
       </div>
-      <div className="relative w-full ml-22 z-0 ">
+      <div className="relative w-full ml-24 z-0 ">
         <Body
           cameraRef={cameraRef}
           navbarRef={navbarRef}
