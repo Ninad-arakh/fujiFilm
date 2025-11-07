@@ -1,1 +1,8 @@
 export const paragraphText = `Cameras have evolved significantly since inception, transforming from bulky devices to sleek, portable gadgets that fit in our pockets. The journey of camera technology has been marked by continuous innovation, leading to enhanced image quality, user-friendly features, and seamless integration with other digital technologies. Today, cameras are not just tools for capturing moments; they are powerful devices that enable creativity and storytelling in unprecedented ways.`;
+
+
+  let width = window.screen.width;
+  let isMobile;
+  if (width <= 480) isMobile = true;
+
+  export default isMobile;
