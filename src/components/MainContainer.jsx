@@ -8,6 +8,8 @@ import Lenis from "lenis";
 import Retroscope from "./Retroscope";
 import { paragraphText } from "../Constants";
 import PhotosSection from "./PhotosSection";
+import Cameras from "./Cameras";
+import BottomSection from "./BottomSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -226,11 +228,15 @@ const MainContainer = ({ cameraRef, textRef, imgLoad, miniCamRef }) => {
         <PhotosSection />
       </div>
 
-      {/* fifth 100vh screen */}
-      <div className="h-screen"></div>
+      {/* fifth 100vh screen cameras*/}
+      <div className="h-screen">
+        <Cameras />
+      </div>
 
       {/* sixth 100vh screen */}
-      <div className="h-screen"></div>
+      <div className="h-screen">
+        <BottomSection />
+      </div>
     </div>
   );
 };
