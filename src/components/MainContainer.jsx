@@ -67,7 +67,7 @@ const MainContainer = ({ cameraRef, textRef, imgLoad, miniCamRef }) => {
         start: "34.33% top",
         end: "66.66% bottom",
         scrub: true,
-        markers: true,
+        // markers: true,
         // anticipatePin: true
       },
     });
@@ -80,28 +80,29 @@ const MainContainer = ({ cameraRef, textRef, imgLoad, miniCamRef }) => {
       scrollTrigger: {
         trigger: pageRef.current,
         start: "51% top",
-        end: "83.33% bottom",
+        end: "85.33% bottom",
         scrub: true,
         // markers: true,
         // anticipatePin: true
       },
     });
     tl4.to(cameraRef.current, {
-      scale:0.6
+      scale: 0.6,
+      xPercent: 7,
     });
 
     const tl5 = gsap.timeline({
       scrollTrigger: {
         trigger: pageRef.current,
-        start: "66.66% top",
-        end: "bottom bottom",
+        start: "68.66% top",
+        end: "bottom 101%",
         scrub: true,
         // markers: true,
         // anticipatePin: true
       },
     });
     tl5.to(cameraRef.current, {
-      yPercent: -100
+      yPercent: -100,
     });
   }, []);
 
