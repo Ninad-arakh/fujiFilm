@@ -6,7 +6,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const App = () => {
-  const [imgLoaded, setImgLoaded] = useState(false);
+  // const [imgLoaded, setImgLoaded] = useState(false);
   const cameraRef = useRef(null);
   const sidebarRef = useRef(null);
   const navbarRef = useRef(null);
@@ -79,14 +79,10 @@ const App = () => {
     );
   };
 
-  const imgLoad = () => {
-    setImgLoaded(true)
-  }
+
 
   useGSAP(() => {
     startAnimation();
-    if (imgLoaded) {
-    }
   }, []);
 
   return (

@@ -12,7 +12,7 @@ const Navbar = ({navbarRef}) => {
         </p>
       </div>
 
-      <button className="font-[birch] border px-6 py-2 bg-[#9b3e08] text-white font-bold rounded-sm fixed right-4 top-1 tracking-wider">
+      <button className="font-[birch] px-6 py-2 bg-[#9b3e08] text-white font-bold rounded-sm fixed right-4 top-1 tracking-wider">
         BUY NOW
       </button>
     </div>

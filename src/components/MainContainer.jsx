@@ -5,6 +5,9 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
+import Retroscope from "./Retroscope";
+import { paragraphText } from "../Constants";
+import PhotosSection from "./PhotosSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,35 +56,49 @@ const MainContainer = ({ cameraRef, textRef, imgLoad, miniCamRef }) => {
     });
     tl2.to(cameraRef.current, {
       rotate: 70,
-      scale: 0.9,
+      scale: 0.8,
     });
 
     const tl3 = gsap.timeline({
       scrollTrigger: {
         trigger: pageRef.current,
-        start: "33.33% top",
+        start: "34.33% top",
         end: "66.66% bottom",
-        scrub: true,
-        // markers: true,
-        // anticipatePin: true
-      },
-    });
-    tl3.to(cameraRef.current, {
-      rotate: 0,
-      scale: 0.6,
-    });
-
-    const tl4 = gsap.timeline({
-      scrollTrigger: {
-        trigger: pageRef.current,
-        start: "50% top",
-        end: "bottom bottom",
         scrub: true,
         markers: true,
         // anticipatePin: true
       },
     });
+    tl3.to(cameraRef.current, {
+      rotate: 0,
+      scale: 1.1,
+    });
+
+    const tl4 = gsap.timeline({
+      scrollTrigger: {
+        trigger: pageRef.current,
+        start: "51% top",
+        end: "83.33% bottom",
+        scrub: true,
+        // markers: true,
+        // anticipatePin: true
+      },
+    });
     tl4.to(cameraRef.current, {
+      scale:0.6
+    });
+
+    const tl5 = gsap.timeline({
+      scrollTrigger: {
+        trigger: pageRef.current,
+        start: "66.66% top",
+        end: "bottom bottom",
+        scrub: true,
+        // markers: true,
+        // anticipatePin: true
+      },
+    });
+    tl5.to(cameraRef.current, {
       yPercent: -100
     });
   }, []);
@@ -116,17 +133,11 @@ const MainContainer = ({ cameraRef, textRef, imgLoad, miniCamRef }) => {
       <div className="h-screen  flex justify-between items-center px-10 ">
         <div className="w-[34%] h-[55vh] -mt-5 flex flex-col gap-3">
           <h6 className="font-[calligraphic] font-semibold">Limited version</h6>
-          <h1 className=" font-bold uppercase text-8xl tracking-wider leading-[10.5vh] font-[birch]">
+          <h1 className=" font-bold uppercase text-8xl tracking-wider leading-[13.5vh] font-[birch]">
             INTAX FUJIFILM
           </h1>
           <p className="text-xs font-normal font-[open-sans] leading-tight mb-2">
-            Cameras have evolved significantly since their inception,
-            transforming from bulky devices to sleek, portable gadgets. Today
-            digital cameras offer high-resolution images and advanced features
-            that cater to both amateur and professional photographers. With the
-            rise of smartphone cameras, capturing stunnig photos has never been
-            easier, allowing everyone to document their lives in the vivid
-            detail.
+            {paragraphText}
           </p>
           <button className="w-[8vw] text-2xl tracking-wider px-2 py-2 text-white bg-[#0e0e0f] font-[birch]">
             BUY NOW
@@ -205,11 +216,15 @@ const MainContainer = ({ cameraRef, textRef, imgLoad, miniCamRef }) => {
         </div>
       </div>
 
-      {/* third 100vh screen */}
-      <div className="h-screen"></div>
+      {/* third 100vh screen Retroscope*/}
+      <div className="h-screen">
+        <Retroscope />
+      </div>
 
-      {/* fourth 100vh screen */}
-      <div className="h-screen"></div>
+      {/* fourth 100vh screen  Photos*/}
+      <div className="h-screen">
+        <PhotosSection />
+      </div>
 
       {/* fifth 100vh screen */}
       <div className="h-screen"></div>
