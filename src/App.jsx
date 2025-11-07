@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import Body from "./components/Body";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import isMobile from "./Constants";
 
 const App = () => {
   // const [imgLoaded, setImgLoaded] = useState(false);
@@ -23,7 +24,7 @@ const App = () => {
       duration: 1.1,
       rotate: 30,
       transformOrigin: "45% 35%",
-      ease: "power2.out"
+      ease: "power2.out",
     });
 
     tl.from(
@@ -33,7 +34,7 @@ const App = () => {
         scale: 0,
         duration: 1,
         transformOrigin: "center center",
-        ease: "power2.out"
+        ease: "power2.out",
       },
       "<-=0.1"
     );
@@ -43,7 +44,7 @@ const App = () => {
       {
         yPercent: -100,
         duration: 1,
-        ease: "power2.out"
+        ease: "power2.out",
       },
       "<"
     );
@@ -62,7 +63,7 @@ const App = () => {
       {
         x: -100,
         duration: 1,
-        ease: "power2.out"
+        ease: "power2.out",
       },
       "<"
     );
@@ -73,13 +74,11 @@ const App = () => {
         scale: 0,
         duration: 1,
         position: "absolute",
-        ease: "power2.out"
+        ease: "power2.out",
       },
       "<"
     );
   };
-
-
 
   useGSAP(() => {
     startAnimation();
@@ -90,11 +89,13 @@ const App = () => {
       <Sidebar sidebarRef={sidebarRef} />
       <div
         ref={lineRef}
-        className="flex h-screen  justify-center items-center fixed left-[6vw] "
+        className="flex h-screen justify-center items-center fixed left-[6vw] "
       >
-        <div className="w-[0.3vw] h-[95vh] bg-[#0e0e0f] rounded-full"></div>
+        {!isMobile && (
+          <div className="w-[0.3vw] h-[95vh] bg-[#0e0e0f] rounded-full"></div>
+        )}
       </div>
-      <div className="relative w-full ml-[7vw] z-0 ">
+      <div className="relative w-full md:ml-[7vw] z-0 ">
         <Body
           cameraRef={cameraRef}
           navbarRef={navbarRef}
