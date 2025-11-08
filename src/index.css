@@ -12,6 +12,11 @@
 }
 
 @font-face {
+  font-family: fujifilm;
+  src: url("./assets/Fujifilm/Fujifilm-Regular.ttf");
+}
+
+@font-face {
   font-family: calligraphic;
   src: url("./assets/Gloria_Hallelujah/GloriaHallelujah-Regular.ttf");
 }

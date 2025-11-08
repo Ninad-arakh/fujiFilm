@@ -7,7 +7,7 @@ const Cameras = () => {
     <div className="w-full h-full relative px-8">
       <div className="flex flex-col justify-center items-center absolute md:relative bottom-12 left-[30%] md:left-0  md:mt-28">
         <h3 className="font-[calligraphic]">Other models</h3>
-        <h1 className="font-[birch] md:text-9xl text-5xl font-bold tracking-wider">
+        <h1 className="font-[fujifilm] md:text-9xl text-4xl font-bold ">
           COLLECTION
         </h1>
       </div>

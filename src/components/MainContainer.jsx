@@ -120,10 +120,10 @@ const MainContainer = ({ cameraRef, textRef, imgLoad, miniCamRef }) => {
         />
         <div
           ref={textRef}
-          className="absolute font-bold  font-[birch] md:text-[19vw] text-[28vw] text-[#9b3e08] items-center justify-center text-center w-11/12 -mt-18 md:mt-0"
+          className="absolute font-bold  font-[fujifilm] md:text-[12vw] text-[12vw] text-[#9b3e08] items-center justify-center text-center w-11/12 -mt-18 md:mt-0"
         >
-          <h1 className="md:leading-[15vw] leading-[40vh] md:tracking-widest">UNLIMITED</h1>
-          <h1 className="md:leading-[15vw] leading-[50vh] mt-10 md:mt-0 md:tracking-widest">RELEASE IPA</h1>
+          <h1 className="md:leading-[15vw] leading-[40vh] ">UNLIMITED</h1>
+          <h1 className="md:leading-[15vw] leading-[50vh] mt-10 md:mt-0 ">RELEASE IPA</h1>
         </div>
         <img
           src={miniCam}

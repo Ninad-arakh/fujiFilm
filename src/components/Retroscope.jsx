@@ -4,7 +4,7 @@ import isMobile, { paragraphText } from "../Constants";
 const Retroscope = () => {
   return (
     <div className="w-[98.5%] h-full md:px-10 px-3 flex flex-col justify-start items-center leading-tight ">
-      <h1 className="font-[birch] font-bold tracking-wide leading-tight md:-mt-10 mt-15 md:h-[55vh] text-[25vw]  text-[#9b3e08]">
+      <h1 className="font-[fujifilm] font-bold tracking-wide leading-tight md:-mt-10 mt-15 md:h-[55vh] text-[12vw]  text-[#9b3e08]">
         RETROSCOPE
       </h1>
 

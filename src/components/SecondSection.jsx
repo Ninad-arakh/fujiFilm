@@ -8,7 +8,7 @@ const SecondSection = () => {
         <h6 className="font-[calligraphic] text-xs md:text-lg font-semibold">
           Limited version
         </h6>
-        <h1 className=" font-bold uppercase md:text-8xl text-3xl md:tracking-wider md:leading-[10.5vh] font-[birch]">
+        <h1 className=" font-bold uppercase md:text-6xl text-3xl  md:leading-[10.5vh] font-[fujifilm]">
           INTAX FUJIFILM
         </h1>
         <p className="text-xs  font-normal font-[open-sans] leading-tight mb-2">

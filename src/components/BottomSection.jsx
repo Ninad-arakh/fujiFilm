@@ -12,7 +12,7 @@ const BottomSection = () => {
 
       <div className=" md:w-5/12 flex flex-col  gap-1 md:gap-4  px-3 md:px-0">
         <p className="font-[calligraphic] md:text-lg">Other models</p>
-        <h1 className="font-[birch] md:text-8xl font-semibold tracking-widest leading-[12vh]">
+        <h1 className="font-[fujifilm] md:text-8xl font-semibold  leading-[16vh]">
           RETHINK CANVAS
         </h1>
         <p className="text-lg">{paragraphText}</p>
